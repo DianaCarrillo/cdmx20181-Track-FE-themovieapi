@@ -1,0 +1,12 @@
+.section-movies{
+ background-color: black;
+ height: 50%;
+}
+
+.poster-image{
+    width: 10%;
+}
+
+*{
+    margin: 1%;
+}

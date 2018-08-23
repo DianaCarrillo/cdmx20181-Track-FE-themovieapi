@@ -7,10 +7,10 @@ let newArray = [];
 let sectionMovies = document.getElementById('section-movies')
 
 window.getMovies = (api, search) => {
-  const json = `http://www.omdbapi.com/?&t=${search}&apikey=${api}`;
+  const json = `http://www.omdbapi.com/?&s=${search}&apikey=${api}`;
   console.log(api);
   console.log(search);
-  console.log(json);
+  // console.log(json);
   fetch(json)
     .then((res) => { // Aquí ya tiene la información.
       return res.json(); // Entonces le digo que a esa información la retorne como un archivo json.
@@ -42,10 +42,17 @@ harryPotterBtn.addEventListener('click', () => {
 
 
 const pintar = (data) => {
-  console.log(data);
-  let title = data.Title;
-  let poster = data.Poster;
+for (i in data){
+let newArray = data[i];
+newArray.forEach(element =>{
+  console.log(element);
+  let title = element.Title;
+  let poster = element.Poster;
   console.log(poster);
- sectionMovies.innerHTML = `<p>${title}</p>
-                            <img src="${poster}">`
+  sectionMovies.innerHTML += `
+                            <p>${title}</p>
+                            <img class="poster-image" src="${poster}">
+                            </div>`
+});
+}
 }
