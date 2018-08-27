@@ -14,7 +14,7 @@ let containerModal = document.getElementById('modal-container');
 window.getMovies = (api, search) => {
   const json = `http://www.omdbapi.com/?&s=${search}&apikey=${api}`;
   console.log(api);
-  // console.log(search);
+  console.log(search);
   console.log(json);
   fetch(json)
     .then((res) => { // Aquí ya tiene la información.
@@ -44,6 +44,7 @@ harryPotterBtn.addEventListener('click', () => {
 
 
 const pintar = (data) => {
+  console.log(data)
   sectionMovies.innerHTML = '';
   for (i in data) {
     let newArray = data[i];
@@ -65,23 +66,24 @@ const pintar = (data) => {
       // titleElement.classList.add('column');
       posterElement.classList.add('column');
       posterElement.classList.add('poster-image');
-
       posterElement.src = poster;
+
+      
       // divEl.classList.add('column');
       // posterElement.classList.add('modal-trigger');
 
       posterElement.addEventListener('click', () => {
         let modal = `
                               <div class="modal-content ">
-                             <h4>${type}</h4>
+                             <h4>${title}</h4>
+                             <p>${type}</p>
                              <p>${year}</p>
                              </div>
-                             <div class="modal-footer">
-                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                           </div>
                              </div>`;
         containerModal.innerHTML = modal;
       });
     });
   }
 };
+
+//comentario 
