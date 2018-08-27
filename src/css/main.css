@@ -5,9 +5,47 @@
 }
 
 .poster-image{
-    width: 10%;
+    width: 12%;
+}
+.title-parragraph{
+    font-size:100%;
+    margin: 2%;
 }
 
 *{
-    margin: 1%;
+    /* margin: 1%; */
+    /* background-color:black; */
+    padding: 0; 
+    /* width: 0; */
+}
+
+.column {
+    float: left;
+    /* width: 33.33%; */
+    margin: 20px;
+    padding: 2%;
+    border:solid #c0ca33;
+  }
+  
+#brand-l{
+    font-size: 3%;
+}
+
+.buttons{
+    margin-top:1%;
+   color:#b71c1c;
+}
+nav{
+    background-color:#b71c1c;
+    font-family: 'Poiret One', cursive;
+}
+
+.movies-icon{
+    margin-left:400px;
+}
+
+#breaking-bad-btn, #harry-potter-btn, #where-the-btn{
+    color:#b71c1c;
+font-weight: bold
+
 }
