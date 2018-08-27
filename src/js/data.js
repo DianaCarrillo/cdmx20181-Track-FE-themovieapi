@@ -73,12 +73,11 @@ const pintar = (data) => {
       posterElement.addEventListener('click', () => {
         let modal = `
                               <div class="modal-content ">
-                             <h4>${type}</h4>
+                             <h4>${title}</h4>
+                             <p>${type}</p>
                              <p>${year}</p>
                              </div>
-                             <div class="modal-footer">
-                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                           </div>
+                  
                              </div>`;
         containerModal.innerHTML = modal;
       });
