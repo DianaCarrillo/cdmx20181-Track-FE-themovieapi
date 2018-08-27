@@ -44,7 +44,7 @@ harryPotterBtn.addEventListener('click', () => {
 
 
 const pintar = (data) => {
-  console.log(data)
+  console.log(data);
   sectionMovies.innerHTML = '';
   for (i in data) {
     let newArray = data[i];
@@ -86,4 +86,5 @@ const pintar = (data) => {
   }
 };
 
-//comentario 
+// comentario 
+// comentario 2
